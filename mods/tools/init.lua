@@ -25,8 +25,8 @@ minetest.register_tool("tools:hatchet", {
 		full_punch_interval = 1.3,
 		max_drop_level=0,
 		groupcaps={
-			cracky = {times={[2]=5.0, [3]=10.00}, uses=20, maxlevel=1},
-			choppy={times={[1]=3.00, [2]=5.00, [3]=10.00}, uses=20, maxlevel=2},
+			cracky = {times={[2]=3.0, [3]=5.00}, uses=20, maxlevel=1},
+			choppy={times={[1]=2.00, [2]=5.00, [3]=10.00}, uses=20, maxlevel=2},
 		},
 		damage_groups = {fleshy=3},
 	},

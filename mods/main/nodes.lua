@@ -128,17 +128,7 @@ minetest.register_node("main:leaves", {
 		fixed = {-1.5, 0.3, -1.2, 1.5, 2.02, 1.2}
 	},
 	groups = {snappy = 3, leafdecay = 3, flammable = 2, leaves = 1},
-	on_dig = function(pos, node, player)
-		math.randomseed(os.time())
-		dropping = math.random(0, 99)
-		if dropping <= 50 then
-			player:get_inventory():add_item("main", "main:branch")
-		elseif dropping <= 80 and dropping > 50 then
-			player:get_inventory():add_item("main", "main:sapling")
-		else
-			minetest.remove_node(pos)
-		end
-	end,
+	drop = "main:branch 10",
 })
 
 minetest.register_node("main:pebble", {
